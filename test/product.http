@@ -1,0 +1,30 @@
+POST http://localhost:8000/products
+Content-Type: application/json
+
+{
+    "name": "Apple",
+    "price": 2.40
+}
+
+###
+
+GET http://localhost:8000/products?page=3&limit=1&sort=asc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTQ1NTU2MDcsInN1YiI6Ijc4ZWY1NTk5LTBjNzYtNGQ2Mi05YTZkLTBhMDBlN2M3NzdiZSJ9.yL0u6RVc8FGPBEfTHisl4ERC7IY5KQ3zuw6Phb9i2is
+
+### 
+
+GET http://localhost:8000/products/18cec063-5117-4f49-9925-ab8dd2844d09
+Content-Type: application/json
+
+### 
+PUT http://localhost:8000/products/18cec063-5117-4f49-9925-ab8dd2844d09
+Content-Type: application/json
+
+{
+    "name": "My Product Updated",
+    "price": 78.00
+}
+
+### 
+DELETE http://localhost:8000/products/e7d70dac-15f7-423d-a491-6227d07c3b1e
+Content-Type: application/json
